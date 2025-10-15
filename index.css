@@ -1,0 +1,41 @@
+:root{
+     --background-colour:#242424;
+ --text-color:yellow;
+ --primary-color:#003049;
+ --secondary-color:#003049;
+ --accent-color:#FDF805;
+ --gray-color:#b9b9b9;
+
+
+
+
+
+}
+*{
+    
+}
+.header-navbar{
+/*Temporary Background colour*/
+    display: flex;
+    background-color: aquamarine;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 20px;
+    box-shadow: 0 8px 30px rgb(0,0,0,0,12);
+}
+
+ui ul{
+    list-style-type: none;
+}
+.header-navbar-right ui ul{
+ cursor: pointer;
+ transition: all 0.5 ease;
+}
+.header-navbar-right ui ul :hover{
+color:var(--primary-color);
+scale:0,9;
+
+}
+    
