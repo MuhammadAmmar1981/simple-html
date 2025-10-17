@@ -1,53 +1,28 @@
-.slice {
-  --c1: #202020;
-  --c2: #00a1b7;
-  --size-letter: 32px;
-  padding: 0.5em 1em;
-  font-size: var(--size-letter);
-
-  background-color: transparent;
-  border: calc(var(--size-letter) / 6) solid var(--c2);
-  border-radius: 0.2em;
+button {
+  padding: 17px 40px;
+  border-radius: 50px;
   cursor: pointer;
-
-  overflow: hidden;
-  position: relative;
-  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
-
-  & > .text {
-    font-weight: 700;
-    color: var(--c2);
-    position: relative;
-    z-index: 1;
-    transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
-  }
+  border: 0;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: none;
+  transition: all 0.5s ease;
 }
 
-.slice::after {
-  content: "";
-
-  width: 0;
-  height: calc(300% + 1em);
-
-  position: absolute;
-  translate: -50% -50%;
-  inset: 50%;
-  rotate: 30deg;
-
-  background-color: var(--c2);
-  transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
+button:hover {
+  letter-spacing: 3px;
+  background-color: var(--primary-color);
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--secondary-color) 0px 7px 29px 0px;
 }
 
-.slice:hover {
-  & > .text {
-    color: var(--c1);
-  }
-  &::after {
-    width: calc(120% + 1em);
-  }
-}
-
-.slice:active {
-  scale: 0.98;
-  filter: brightness(0.9);
+button:active {
+  letter-spacing: 3px;
+  background-color: var(--secondary-color);
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--primary-color) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }
